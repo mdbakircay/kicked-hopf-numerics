@@ -1,0 +1,78 @@
+Derivative range  b=1.0, q=0.5: numerical range [0.390524, 2.276142]  vs  closed form [0.390524, 2.276142]
+Derivative range  b=2.2, q=0.8: numerical range [-2.592465, 8.148020]  vs  closed form [-2.592465, 8.148020]
+Derivative range  b=1.0, q=1.7: numerical range [-1.801144, 0.742943]  vs  closed form [-1.801144, 0.742943]
+Edges  b=0   : q_lo = 1.0000  (diffeomorphism below),  q_c = 2.0000  (contraction above)
+Edges  b=0.5 : q_lo = 0.8944  (diffeomorphism below),  q_c = 2.0797  (contraction above)
+Edges  b=1   : q_lo = 0.7071  (diffeomorphism below),  q_c = 2.2882  (contraction above)
+Edges  b=2.2 : q_lo = 0.4138  (diffeomorphism below),  q_c = 3.0684  (contraction above)
+Edges  b=4   : q_lo = 0.2425  (diffeomorphism below),  q_c = 4.5616  (contraction above)
+[    8.5 s] reset-limit Lyapunov grid done
+
+Reset limit: range of q with a positive Lyapunov exponent
+  b=0.0  q_lo=1.0000  q_c=2.0000  lambda>0 for q in 1.14–1.14
+  b=0.5  q_lo=0.8944  q_c=2.0797  lambda>0 for q in 1.00–1.29
+  b=1.0  q_lo=0.7071  q_c=2.2882  lambda>0 for q in 0.77–1.47
+  b=1.5  q_lo=0.5547  q_c=2.5784  lambda>0 for q in 0.59–1.68
+  b=2.0  q_lo=0.4472  q_c=2.9208  lambda>0 for q in 0.52–1.68
+  b=2.2  q_lo=0.4138  q_c=3.0684  lambda>0 for q in 0.46–1.91
+  b=3.0  q_lo=0.3162  q_c=3.7025  lambda>0 for q in 0.35–2.18
+  b=4.0  q_lo=0.2425  q_c=4.5616  lambda>0 for q in 0.27–2.48
+
+Thin rotation intervals (b = 1): rotation interval at the phase where its right end is the golden mean
+  q - q_lo = 0.1: rho_upper = 0.61807657, rho_lower = 0.59999995, width = 1.81e-02  (non-degenerate => h_top > 0)
+  q - q_lo = 0.01: rho_upper = 0.61803392, rho_lower = 0.61764713, width = 3.87e-04  (non-degenerate => h_top > 0)
+  q - q_lo = 0.001: rho_upper = 0.61803430, rho_lower = 0.61802730, width = 7.00e-06  (non-degenerate => h_top > 0)
+[   37.7 s] rotation-interval section done
+
+Degree-zero certificates (40-digit interval arithmetic)
+  b=1, q=1.2000: certified=True  (Omega_k with k=262, odd prime period 7)
+  b=2.2, q=1.5000: certified=True  (Omega_k with k=0, odd prime period 3)
+[   46.8 s] certificates done
+
+Explicit finite-tau edges Q_lo / Q_hi (units of r0)
+   b   tau=1          tau=2          tau=3          tau=5          tau=8          tau=12         tau->inf
+  0    0.184/2.316  0.395/2.051  0.563/2.007  0.784/2.000  0.931/2.000  0.986/2.000  1.000/2.000
+  1    0.154/2.586  0.333/2.331  0.473/2.294  0.638/2.288  0.702/2.288  0.707/2.288  0.707/2.288
+  2.2  0.110/3.357  0.237/3.105  0.323/3.073  0.397/3.069  0.413/3.068  0.414/3.068  0.414/3.068
+  4    0.074/4.924  0.156/4.606  0.204/4.568  0.237/4.562  0.242/4.562  0.243/4.562  0.243/4.562
+
+Exact-map test (no chaos where the sink or circle condition holds)
+  cases satisfying the circle condition: 338, the sink condition: 79, chaotic among them: 0
+[   66.0 s] finite-tau section done
+
+Difference between the scaled kicked map and the model map
+  eps=0.04    r0=0.283  max difference=0.0814  ratio to r0=0.288
+  eps=0.01    r0=0.141  max difference=0.0338  ratio to r0=0.239
+  sink regime q=2.638, tau=3: spread of 4 random initial states after 40 kicks = 1.8e-15
+[   66.7 s] three-dimensional test done
+
+Glucose–insulin model: normal-form reduction, window and Lyapunov exponents
+  [+] chaotic  A=  89.1 mg/dL T=  280 min | mu0=+6.36e-03 b0=1.34 q0=1.09 tau0=1.78 inside window: True | lambda (median of 3 ICs) = +1.37e-03 /min  ->  chaotic
+  [+] chaotic  A= 111.0 mg/dL T=  525 min | mu0=+8.58e-03 b0=1.26 q0=1.23 tau0=4.50 inside window: True | lambda (median of 3 ICs) = +6.66e-04 /min  ->  chaotic
+  [+] regular  A=  53.3 mg/dL T=  432 min | mu0=+5.13e-03 b0=0.93 q0=0.98 tau0=2.22 inside window: True | lambda (median of 3 ICs) = -1.91e-04 /min  ->  not chaotic
+  [−] chaotic  A=  31.9 mg/dL T=  715 min | mu0=+5.83e-03 b0=1.39 q0=0.71 tau0=4.17 inside window: True | lambda (median of 3 ICs) = +4.74e-04 /min  ->  chaotic
+  [−] chaotic  A=  46.6 mg/dL T=  450 min | mu0=+6.85e-03 b0=1.37 q0=1.55 tau0=3.08 inside window: True | lambda (median of 3 ICs) = +6.03e-04 /min  ->  chaotic
+  [−] regular  A=  83.8 mg/dL T=  705 min | mu0=+3.79e-03 b0=1.64 q0=5.73 tau0=2.67 inside window: False | lambda (median of 3 ICs) = -3.69e-03 /min  ->  not chaotic
+[  167.6 s] model section done
+
+Mini-scan (16 runs with a between-kick cycle, screening criterion): 1 chaotic, 1 of them inside the window; window admits 81% of runs
+[  172.9 s] mini-scan done
+
+0–1 test on the stroboscopic glucose series of the example runs (K near 1: chaos, near 0: regular)
+  [+] chaotic  lambda=+1.37e-03  K=0.998
+  [+] chaotic  lambda=+6.66e-04  K=0.998
+  [+] regular  lambda=-1.91e-04  K=-0.172
+  [−] chaotic  lambda=+4.74e-04  K=0.998
+  [−] chaotic  lambda=+6.03e-04  K=0.997
+  [−] regular  lambda=-3.69e-03  K=0.000
+[  185.7 s] 0–1 test done
+
+Summary
+  * Reset limit: diffeomorphism iff q < 1/sqrt(1+b^2); contraction iff q > (sqrt(1+b^2)+sqrt(9+b^2))/2.
+  * Lower edge sharp: just above it the rotation interval is non-degenerate (Section 2 above).
+  * Finite relaxation: explicit edges Q_lo, Q_hi converge to the reset-limit edges; no exact-map chaos where
+    the sink or circle condition holds (Section 4 above).
+  * Glucose–insulin model: chaotic runs lie inside the window predicted from the normal form at their own
+    between-kick equilibrium (Section 6 above).
+Run with --full to use the full grids.
+[  185.7 s] finished
